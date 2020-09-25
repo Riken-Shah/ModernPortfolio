@@ -1,0 +1,73 @@
+@import "variable.scss";
+
+@font-face {
+  font-family: GT-America;
+  src: url("./Fonts/GT\ America\ Extended\ Bold.ttf");
+}
+
+body {
+  // Dark Theme
+  background-color: $dark-theme-bg;
+  color: $primary-color-dark;
+  font-family: GT-America;
+
+  // Light Theme
+  &.light {
+    background-color: $light-theme-bg;
+    color: $primary-color-light;
+  }
+
+  // Main Container Styles
+  .main-container {
+    margin: 20px 50px 0 50px;
+
+    // Navbar
+    .nav-container {
+      overflow: hidden;
+      display: flex;
+      // Navbar Items
+      .nav-item {
+        color: $primary-color-dark;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        text-align: center;
+      }
+      // Middle
+      .connect {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+      }
+      // Hamburger
+      .hamburger {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        vertical-align: middle;
+        .dash {
+          width: 25px;
+          height: 2px;
+          background: $primary-color-dark;
+          margin: 2px 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-tablet) {
+  body {
+    .main-container {
+      .nav-container {
+        .connect {
+          display: none;
+        }
+        .logo {
+          width: 90%;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
