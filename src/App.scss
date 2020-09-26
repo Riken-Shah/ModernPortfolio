@@ -53,10 +53,24 @@ body {
           margin: 2px 0;
         }
       }
+      .navbar-open {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background: #131313;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        overflow: hidden;
+      }
     }
     // Hero Wrapper
     .hero-wrapper {
-      min-height: 80vh;
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       // Main Heading
       .main-heading {
         margin: 60px 0;
@@ -91,7 +105,7 @@ body {
       }
       // Button
       .button-wrapper {
-        margin: 80px auto;
+        margin: 40px auto;
         text-align: center;
         button {
           padding: 15px 45px;
@@ -112,8 +126,8 @@ body {
 }
 
 @media screen and (max-width: 995px) and (min-width: $breakpoint-tablet) {
-  .hero-wrapper {
-    .main-container {
+  .main-container {
+    .hero-wrapper {
       .main-heading {
         .word {
           font-size: 50px !important;
@@ -147,7 +161,7 @@ body {
           }
         }
         .button-wrapper {
-          margin: 40px auto;
+          margin: 20px auto;
           button {
             font-size: 14px;
             padding: 10px 30px;
@@ -161,7 +175,7 @@ body {
         .self-pic {
           position: initial;
           display: block;
-          margin: 50px auto;
+          margin: 20px auto 50px auto;
           img {
             width: 150px;
           }
