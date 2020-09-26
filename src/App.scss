@@ -54,11 +54,78 @@ body {
         }
       }
     }
+    // Hero Wrapper
+    .hero-wrapper {
+      min-height: 80vh;
+      // Main Heading
+      .main-heading {
+        margin: 60px 0;
+        position: relative;
+        text-align: center;
+        .word {
+          font-size: 65px;
+          display: inline-block;
+          padding: 0 15px;
+          text-transform: uppercase;
+          .highlight {
+            color: $secondary-color;
+          }
+          .shadow {
+            height: 13px;
+            background: black;
+            filter: drop-shadow(0 35px 15px black);
+          }
+        }
+      }
+      .self-pic {
+        display: none;
+        position: absolute;
+        right: 8%;
+        z-index: 1;
+        &.show {
+          display: block;
+        }
+        img {
+          width: 220px;
+        }
+      }
+      // Button
+      .button-wrapper {
+        margin: 80px auto;
+        text-align: center;
+        button {
+          padding: 15px 45px;
+          border-radius: 30px;
+          background: #c4c4c4;
+          font-size: 20px;
+          border-style: none;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+      // Arrow
+      .arrow-wrapper {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 995px) and (min-width: $breakpoint-tablet) {
+  .hero-wrapper {
+    .main-container {
+      .main-heading {
+        .word {
+          font-size: 50px !important;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: $breakpoint-tablet) {
   body {
     .main-container {
+      margin: 20px 20px 0 20px;
       .nav-container {
         .connect {
           display: none;
@@ -66,6 +133,38 @@ body {
         .logo {
           width: 90%;
           text-align: left;
+        }
+      }
+      .hero-wrapper {
+        .main-heading {
+          margin: 35px 20px;
+          .word {
+            padding: 5px 4px;
+            font-size: 20px;
+            .shadow {
+              display: none;
+            }
+          }
+        }
+        .button-wrapper {
+          margin: 40px auto;
+          button {
+            font-size: 14px;
+            padding: 10px 30px;
+          }
+        }
+        .arrow-wrapper {
+          display: block;
+          margin: 60px auto;
+          text-align: center;
+        }
+        .self-pic {
+          position: initial;
+          display: block;
+          margin: 50px auto;
+          img {
+            width: 150px;
+          }
         }
       }
     }
