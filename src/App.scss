@@ -1,4 +1,5 @@
 @import "variable.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap");
 
 @font-face {
   font-family: GT-America;
@@ -6,7 +7,7 @@
 }
 @font-face {
   font-family: Poppins;
-  src: url("./Fonts/Poppins-Medium.ttf");
+  src: url("./Fonts/Poppins-Regular.ttf");
 }
 
 body {
@@ -270,6 +271,43 @@ body {
         display: none;
       }
     }
+    // Overview Wrapper
+    .overview-wrapper {
+      max-height: 100vh;
+      max-width: 100vw;
+      .item {
+        display: flex;
+        justify-content: space-between;
+        &:not(:first-child) {
+          margin: 60px auto;
+        }
+        &:hover {
+          .title {
+            @include textGlitch("test", 22, white, black, red, blue, 450, 115);
+          }
+        }
+        .title {
+          font-size: 22px;
+          text-transform: uppercase;
+          flex: 0 1 30%;
+          min-height: 100%;
+          max-width: 30%;
+        }
+        .description {
+          font-size: 20px;
+          font-family: Poppins;
+          width: 500px;
+          flex: 0 1 70%;
+          min-height: 100%;
+          max-width: 70%;
+          font-weight: 200;
+          .space-top {
+            display: block;
+            padding-top: 30px;
+          }
+        }
+      }
+    }
   }
 }
 // To fix the font-size overflowing in hero-section title
@@ -381,6 +419,23 @@ body {
           margin: 20px auto 50px auto;
           img {
             width: 150px;
+          }
+        }
+      }
+      .overview-wrapper {
+        .item {
+          flex-flow: column;
+          width: 100%;
+          .title {
+            padding-bottom: 20px;
+            font-size: 17px;
+          }
+          .description {
+            max-width: 100%;
+            width: 100%;
+            font-size: 15px;
+            line-height: 28px;
+            font-weight: 300;
           }
         }
       }
