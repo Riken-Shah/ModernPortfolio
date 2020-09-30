@@ -177,8 +177,60 @@ body {
           display: inline-block;
           padding: 0 15px;
           text-transform: uppercase;
+          // .highlight {
+          //   color: $secondary-color;
+          //   @supports (-webkit-text-stroke: 1px white) {
+          //     & {
+          //       -webkit-text-stroke: 1px white;
+          //       -webkit-text-fill-color: black;
+          //     }
+          //   }
+          //   &:hover {
+          //     @supports (-webkit-text-stroke: 1px white) {
+          //       & {
+          //         -webkit-text-stroke: 0px white;
+          //         -webkit-text-fill-color: $secondary-color;
+          //       }
+          //     }
+          //   }
+          // }
           .highlight {
-            color: $secondary-color;
+            position: relative;
+            color: black;
+            // -webkit-text-stroke: 1px white;
+            // -webkit-text-fill-color: black;
+            text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+              1px 1px 0 white;
+
+            text-decoration: none;
+            overflow: hidden;
+            span {
+              position: absolute;
+              top: 0;
+              left: 0;
+              overflow: hidden;
+              transform: translateY(-100%);
+              transition: transform 0.5s ease-in-out;
+              &::before {
+                display: inline-block;
+                content: attr(data-content);
+                //color to be filled
+                color: $secondary-color;
+                text-shadow: -1px -1px 0 white, 1px -1px 0 white,
+                  -1px 1px 0 white, 1px 1px 0 white;
+                z-index: 5;
+                transform: translateY(100%);
+                transition: transform 0.5s ease-in-out;
+              }
+            }
+            &:hover {
+              span {
+                transform: translateY(0);
+                &::before {
+                  transform: translateY(0);
+                }
+              }
+            }
           }
           .shadow {
             height: 13px;
