@@ -4,6 +4,10 @@
   font-family: GT-America;
   src: url("./Fonts/GT\ America\ Extended\ Bold.ttf");
 }
+@font-face {
+  font-family: Poppins;
+  src: url("./Fonts/Poppins-Medium.ttf");
+}
 
 body {
   // Dark Theme
@@ -46,23 +50,115 @@ body {
         margin: auto;
         flex-direction: column;
         vertical-align: middle;
+        z-index: 4;
+        &.change-color {
+          .dash {
+            background: $primary-color-light;
+          }
+        }
         .dash {
           width: 25px;
           height: 2px;
           background: $primary-color-dark;
           margin: 2px 0;
+          transition: all 0.5s ease-in-out;
+          &.active {
+            margin: 0;
+            &:first-child {
+              transform: rotateZ(45deg);
+            }
+            &:last-child {
+              transform: rotateZ(135deg);
+            }
+          }
         }
       }
       .navbar-open {
         display: flex;
         width: 100vw;
         height: 100vh;
-        background: #131313;
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 3;
-        overflow: hidden;
+        overflow: scroll;
+        z-index: -1;
+        // Section of Navbar open div
+        .block {
+          background: black;
+          flex-basis: 25%;
+          flex-grow: 0;
+          height: 100%;
+          text-align: center;
+          border: solid 0.5px #393939;
+          position: relative;
+          transform: translateY(-100%);
+
+          &.deactivate {
+            transition: transform 1.2s ease;
+            @for $i from 1 through 7 {
+              &:nth-child(#{$i}n) {
+                transition-delay: #{$i * 0.15}s;
+              }
+            }
+          }
+          &.active {
+            transition: transform 1.2s ease;
+            transform: translateY(0%);
+            @for $i from 1 through 7 {
+              &:nth-child(#{$i}n) {
+                transition-delay: #{$i * 0.15}s;
+              }
+            }
+          }
+
+          .main-content {
+            padding: 80px 20px;
+            .number {
+              font-size: 100px;
+              display: block;
+            }
+            .title {
+              display: block;
+              font-size: 25px;
+              padding: 40px auto;
+              text-transform: uppercase;
+            }
+          }
+          .description {
+            display: block;
+            position: absolute;
+            opacity: 0;
+            bottom: 10%;
+            left: 0;
+            right: 0;
+            font-size: 12px;
+            text-transform: capitalize;
+            line-height: 20px;
+            margin: 0 20px;
+            font-family: Poppins;
+          }
+
+          &:hover {
+            transition: all 0.5s linear;
+            background: #c4c4c4;
+            color: black;
+            transition-delay: 0ms !important;
+            .description {
+              opacity: 1;
+              transition: opacity 0.7s;
+            }
+          }
+        }
+
+        .social-media-wrapper {
+          display: none;
+        }
+        &.active {
+          z-index: 3;
+        }
+        &.deactivate {
+          transition: all 3s ease-in-out;
+        }
       }
     }
     // Hero Wrapper
@@ -124,7 +220,7 @@ body {
     }
   }
 }
-
+// To fix the font-size overflowing in hero-section title
 @media screen and (max-width: 995px) and (min-width: $breakpoint-tablet) {
   .main-container {
     .hero-wrapper {
@@ -134,6 +230,12 @@ body {
         }
       }
     }
+  }
+}
+// To fix navbar open resizing
+@media screen and (max-width: 820px) and (min-width: $breakpoint-tablet) {
+  body .main-container .nav-container .navbar-open .block .main-content .title {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: $breakpoint-tablet) {
@@ -147,6 +249,55 @@ body {
         .logo {
           width: 90%;
           text-align: left;
+        }
+        .navbar-open {
+          flex-flow: column;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+          background: black;
+          &.deactivate {
+            transition: all 1s ease-in-out;
+          }
+          .block {
+            border: none;
+            height: auto;
+            width: 100%;
+
+            margin: 0;
+            flex-basis: auto;
+            flex-grow: 0;
+
+            pointer-events: none;
+
+            transform: translateY(-1000%);
+            .main-content {
+              padding: 0%;
+              .number,
+              .description {
+                display: none;
+              }
+              .title {
+                padding: 20px 10px;
+              }
+            }
+            &.active,
+            &.deactivate {
+              transition-delay: 0ms !important;
+            }
+          }
+          .social-media-wrapper {
+            display: flex;
+            padding-top: 50px;
+            flex-basis: auto;
+            max-width: 250px;
+            justify-content: space-evenly;
+            align-items: baseline;
+            img {
+              flex-basis: 6%;
+              flex-grow: 0;
+            }
+          }
         }
       }
       .hero-wrapper {
