@@ -308,6 +308,103 @@ body {
         }
       }
     }
+    // Project Wrapper
+    .project-wrapper {
+      margin: 100px auto;
+      .main-projects {
+        .project {
+          display: flex;
+          height: 0px;
+          transition: all 1s ease, margin 2s ease;
+          margin: -150px auto;
+          position: relative;
+          overflow: hidden;
+          z-index: -1;
+          .number {
+            font-size: 22px;
+            min-height: 100%;
+            min-width: 50px;
+          }
+          img {
+            display: none;
+          }
+          .title-wrapper {
+            min-height: 100%;
+            position: relative;
+            .title {
+              text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+                1px 1px 0 white;
+              color: black;
+              font-size: 73px;
+              text-transform: capitalize;
+            }
+            .type {
+              display: block;
+              font-size: 22px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              text-transform: capitalize;
+              font-family: Poppins;
+            }
+            .number {
+              display: none;
+            }
+          }
+          &.active {
+            height: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin: 5px auto;
+            transition: all 1s ease, margin 1s ease;
+            z-index: 1;
+          }
+
+          &:hover {
+            .title-wrapper {
+              .title {
+                text-shadow: none;
+                color: $primary-color-dark;
+                transition: all 0.5s ease;
+              }
+              img {
+                opacity: 80%;
+              }
+            }
+          }
+        }
+        .extra-projects {
+          position: relative;
+          overflow-y: hidden;
+          transition: all 0.5s ease;
+        }
+      }
+      .hide {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        background: black;
+        font-family: Poppins;
+        transition: all 1s ease-in-out;
+        span {
+          font-size: 18px;
+          padding-top: 10px;
+          padding-left: 20px;
+          cursor: pointer;
+        }
+        img {
+          align-self: baseline;
+          cursor: pointer;
+
+          transition: all 1s ease;
+          &.rotate {
+            transform: rotate(180deg);
+          }
+        }
+        &.show {
+          transform: translateY(90%);
+        }
+      }
+    }
   }
 }
 // To fix the font-size overflowing in hero-section title
@@ -437,6 +534,59 @@ body {
             line-height: 28px;
             font-weight: 300;
           }
+        }
+      }
+      .project-wrapper {
+        .main-projects {
+          .project {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            transition: all 1s ease;
+            opacity: 0;
+            margin: -500px auto;
+
+            .number {
+              display: none;
+            }
+            .title-wrapper {
+              margin: 20px 0;
+              .mobile {
+                display: flex;
+                justify-content: flex-start;
+              }
+              .title {
+                font-size: 22px;
+                text-shadow: none;
+                color: $primary-color-dark;
+              }
+              .type {
+                font-size: 15px;
+                text-align: left;
+                font-weight: 400;
+              }
+              .number {
+                font-size: 22px;
+                min-width: auto;
+                display: block;
+                // padding-left: 20px;
+                padding-right: 20px;
+              }
+            }
+            img {
+              display: block;
+              width: 350px;
+              margin: auto;
+            }
+            &.active {
+              margin: 50px 10px;
+              padding: 0;
+              opacity: 1;
+            }
+          }
+        }
+        canvas {
+          display: none;
         }
       }
     }

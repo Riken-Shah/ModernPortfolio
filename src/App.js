@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-import { Navbar, Hero, Overview } from "./sections";
+import { Navbar, Hero, Overview, Project } from "./sections";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Navbar />
       <Hero />
       <Overview />
+      <Project />
     </div>
   );
 }
