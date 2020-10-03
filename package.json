@@ -6,10 +6,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "gsap": "^3.0.4",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-image-list-distort": "^1.0.33",
+    "react-scripts": "3.4.3",
+    "three": "^0.111.0"
   },
   "scripts": {
     "start": "react-scripts start",
