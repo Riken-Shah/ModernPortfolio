@@ -21,6 +21,10 @@ body {
     background-color: $light-theme-bg;
     color: $primary-color-light;
   }
+  &.stop {
+    position: fixed;
+    overflow: hidden;
+  }
 
   // Main Container Styles
   .main-container {
@@ -402,6 +406,36 @@ body {
         }
         &.show {
           transform: translateY(90%);
+        }
+      }
+    }
+    // Achievements Wrapper
+    .achievements-wrapper {
+      max-height: 100vh;
+      margin: 150px auto;
+      overflow: hidden;
+      .item {
+        height: 150px;
+        .description {
+          max-height: 100px;
+          position: relative;
+          // overflow-x: scroll;
+          p {
+            height: 300px;
+            // overflow: hidden;
+            position: absolute;
+            line-height: 30px;
+            opacity: 0;
+            transition: all 1s ease;
+            transform: translateY(100%);
+            &.active {
+              opacity: 1;
+              transform: translateY(0%);
+            }
+            &.prev {
+              transform: translateY(-100%);
+            }
+          }
         }
       }
     }
