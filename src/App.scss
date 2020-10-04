@@ -29,6 +29,11 @@ body {
   // Main Container Styles
   .main-container {
     margin: 20px 50px 0 50px;
+    .shadow {
+      height: 13px;
+      background: black;
+      filter: drop-shadow(0 35px 15px black);
+    }
 
     // Navbar
     .nav-container {
@@ -439,6 +444,43 @@ body {
         }
       }
     }
+    // Connection Wrapper
+    .connection-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: 50px auto;
+      position: relative;
+      a {
+        font-size: 6vw;
+        color: $primary-color-dark;
+        text-decoration: none;
+        text-transform: lowercase;
+        transition: all 0.2s linear;
+        &:hover {
+          // text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+          // 1px 1px 0 white;
+          // color: black;
+          @include textGlitch("test", 22, white, black, red, blue, 450, 115);
+        }
+      }
+      div {
+        span {
+          font-size: 22px;
+          text-transform: uppercase;
+        }
+        img {
+          padding-left: 15px;
+        }
+      }
+      .picture {
+        position: absolute;
+        top: -50px;
+        right: -100px;
+        img {
+          width: 250px;
+        }
+      }
+    }
   }
 }
 // To fix the font-size overflowing in hero-section title
@@ -448,6 +490,13 @@ body {
       .main-heading {
         .word {
           font-size: 50px !important;
+        }
+      }
+    }
+    .connection-wrapper {
+      .picture {
+        img {
+          width: 150px !important;
         }
       }
     }
@@ -463,6 +512,9 @@ body {
   body {
     .main-container {
       margin: 20px 20px 0 20px;
+      .shadow {
+        display: none;
+      }
       .nav-container {
         .connect {
           display: none;
@@ -620,6 +672,24 @@ body {
           }
         }
         canvas {
+          display: none;
+        }
+      }
+      .connection-wrapper {
+        a {
+          font-size: 22px;
+        }
+        div {
+          span {
+            font-size: 15px;
+          }
+          img {
+            padding-left: 5px;
+            width: 18px;
+          }
+        }
+
+        .picture {
           display: none;
         }
       }
