@@ -1,8 +1,17 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
+import { Navbar, Hero, Overview, Project, Connection } from "./sections";
 
 function App() {
-  return <h1>Cleaning</h1>;
+  return (
+    <div className="main-container">
+      <Navbar />
+      <Hero />
+      <Overview />
+      <Project />
+      <Connection />
+    </div>
+  );
 }
 
 export default App;
