@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import arrow from "../Images/arrow.svg";
-import project1 from "../Images/project1.jpeg";
+import AudiR8 from "../Images/AudiR8.png";
+import CocoCola from "../Images/CocoColaNightPortal.png";
+import EducationalPortal from "../Images/EducationalPortal.png";
+import MusicAppConcept from "../Images/MusicApp.jpg";
+import ECommerce from "../Images/E-CommerceApp.jpg";
+import ElectronicApp from "../Images/ElectronicApp.jpg"
 import ImageDistort from "react-image-list-distort";
-import project2 from "../Images/project2.png";
 
 const projectBreakpoint = 3;
 
@@ -61,12 +65,14 @@ function Project() {
         itemRoot={".project"}
         options={{
           effect: "redshift",
-          strength: 0.15,
+          strength: 0.1,
           geometry: {
             shape: "plane",
-            width: 0.5,
-            height: 0.5,
+            width: 0.7,
+            height: 0.7,
             radius: 0.5,
+            segmentsWidth: 500,
+            segmentsHeight: 300
           },
         }}
       />
@@ -95,10 +101,14 @@ const ProjectBlock = ({ title, number, type, active, img }) => {
 
 // Project Raw Data
 const projectDetails = [
-  { title: "educational portal", type: "website design", img: project1 },
-  { title: "shopping app", type: "app design", img: project1 },
-  { title: "music app", type: "app design", img: project2 },
-  { title: "music app", type: "app design", img: project1 },
-  { title: "music app", type: "app design", img: project2 },
+  { title: "Audi R8 Website", type: "website design", img: AudiR8 },
+  { title: "Coco Cola Night Portal", type: "app design", img: CocoCola },
+  { title: "Music App concept", type: "app design", img: MusicAppConcept },
+  { title: "Educational Portal", type: "app design", img: EducationalPortal },
+  { title: "E-commerce app concept", type: "app design", img: ECommerce },
+  { title: "Electronic app concept", type: "app design", img: ElectronicApp },
+
 ];
 export default Project;
+
+
