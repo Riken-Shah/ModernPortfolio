@@ -4,7 +4,7 @@ import aryan from "../Images/aryan.png";
 
 function Connection() {
   return (
-    <div className="connection-wrapper">
+    <div className="connection-wrapper" id="connect">
       <div>
         <span>Let's Talk</span>
         <img src={arrow} alt="Arrow" />

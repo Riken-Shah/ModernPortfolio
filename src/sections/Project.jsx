@@ -22,8 +22,8 @@ function Project() {
   }, [showMoreProjects]);
 
   return (
-    <div className="project-wrapper">
-      <div className="main-projects">
+    <div className="project-wrapper" id="projects">
+      <div className="main-projects" >
         {projectDetails.slice(0, projectBreakpoint).map((value, index) => (
           <ProjectBlock key={index} number={++index} {...value} active={true} />
         ))}
