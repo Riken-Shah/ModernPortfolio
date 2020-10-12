@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import arrow from "../Images/arrow.svg";
-import project1 from "../Images/project1.jpeg";
+import AudiR8 from "../Images/AudiR8.png";
+import CocoCola from "../Images/CocoColaNightPortal.png";
+import EducationalPortal from "../Images/EducationalPortal.png";
+import MusicAppConcept from "../Images/MusicApp.jpg";
+import ECommerce from "../Images/E-CommerceApp.jpg";
+import ElectronicApp from "../Images/ElectronicApp.jpg"
 import ImageDistort from "react-image-list-distort";
-import project2 from "../Images/project2.png";
 
 const projectBreakpoint = 3;
 
@@ -22,8 +26,8 @@ function Project() {
   }, [showMoreProjects]);
 
   return (
-    <div className="project-wrapper">
-      <div className="main-projects">
+    <div className="project-wrapper" id="projects">
+      <div className="main-projects" >
         {projectDetails.slice(0, projectBreakpoint).map((value, index) => (
           <ProjectBlock key={index} number={++index} {...value} active={true} />
         ))}
@@ -61,12 +65,14 @@ function Project() {
         itemRoot={".project"}
         options={{
           effect: "redshift",
-          strength: 0.15,
+          strength: 0.1,
           geometry: {
             shape: "plane",
-            width: 0.5,
-            height: 0.5,
+            width: 0.7,
+            height: 0.7,
             radius: 0.5,
+            segmentsWidth: 500,
+            segmentsHeight: 300
           },
         }}
       />
@@ -75,9 +81,9 @@ function Project() {
 }
 
 // Project Block
-const ProjectBlock = ({ title, number, type, active, img }) => {
+const ProjectBlock = ({ title, number, type, active, img, to }) => {
   return (
-    <div className={`project${active ? " active" : ""}`}>
+    <div className={`project${active ? " active" : ""}`} onClick={() => window.open(to, 'mywindow')}>
       <img src={img} alt={"Project-" + number + 1} />
       <span className="number">{number < 9 ? `0${number}` : number}</span>
       <div className="title-wrapper">
@@ -95,10 +101,14 @@ const ProjectBlock = ({ title, number, type, active, img }) => {
 
 // Project Raw Data
 const projectDetails = [
-  { title: "educational portal", type: "website design", img: project1 },
-  { title: "shopping app", type: "app design", img: project1 },
-  { title: "music app", type: "app design", img: project2 },
-  { title: "music app", type: "app design", img: project1 },
-  { title: "music app", type: "app design", img: project2 },
+  { title: "Audi R8 Website", type: "website design", img: AudiR8, to: "https://www.instagram.com/p/CF1gEMOgZNj/?igshid=1wipjktdmznfy" },
+  { title: "Coco Cola Night Portal", type: "app design", img: CocoCola, to: "https://www.instagram.com/p/CCaG6ZrA_x-/?igshid=hbf3dz3pw1rx" },
+  { title: "Music App concept", type: "app design", img: MusicAppConcept, to: "https://www.instagram.com/p/CCp3HdbAH6q/?igshid=po5x1h2pklek" },
+  { title: "Educational Portal", type: "app design", img: EducationalPortal, to: "https://www.instagram.com/p/B_zi-GADllA/?igshid=pbg8xalum5ox" },
+  { title: "E-commerce app concept", type: "app design", img: ECommerce, to: "https://www.instagram.com/p/CCS6rYbgGqH/?igshid=hy1leio2g58y" },
+  { title: "Electronic app concept", type: "app design", img: ElectronicApp, to: "https://www.instagram.com/p/B_5Kl3NDCpO/?igshid=x1xjeniy1w53" },
+
 ];
 export default Project;
+
+

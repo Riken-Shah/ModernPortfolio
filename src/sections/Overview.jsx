@@ -2,7 +2,7 @@ import React from "react";
 
 function Overview() {
   return (
-    <div className="overview-wrapper">
+    <div className="overview-wrapper" id="overview">
       <div className="item">
         <h1 data-text="Welcome" className="title">
           WELCOME
