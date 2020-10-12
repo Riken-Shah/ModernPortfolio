@@ -276,6 +276,7 @@ body {
           border-style: none;
           font-weight: bold;
           text-transform: uppercase;
+          cursor: pointer;
         }
       }
       // Arrow
@@ -620,7 +621,7 @@ body {
           }
         }
       }
-      .overview-wrapper {
+      .overview-wrapper, .solution-wrapper {
         .item {
           flex-flow: column;
           width: 100%;

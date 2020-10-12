@@ -17,6 +17,10 @@ function Word({ text, highlight = false, ...left }) {
 // Main Function
 function Hero() {
   const [showImg, setShowImg] = useState(false);
+  const goTo = (to) => 
+    document.querySelector(`${to}`).scrollIntoView({ 
+      behavior: 'smooth' 
+    });
   return (
     <div className="hero-wrapper" id="home">
       <div className="main-heading">
@@ -50,10 +54,10 @@ function Hero() {
       </div>
 
       <div className="button-wrapper">
-        <button>PROJECTS</button>
+        <button onClick={() => goTo("#projects")}>PROJECTS</button>
       </div>
 
-      <div className="arrow-wrapper">
+      <div className="arrow-wrapper" onClick={() => goTo("#overview")}>
         <img src={arrow} alt="Arrow"></img>
       </div>
     </div>
