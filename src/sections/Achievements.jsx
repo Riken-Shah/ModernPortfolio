@@ -1,90 +1,87 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { RellaxWrapper } from 'react-rellax-wrapper';
+// Imgs
+import img1 from '../Images/achivement1.jpg'
+import img2 from '../Images/achivement2.jpg'
+import img3 from '../Images/achivement3.jpg'
+import img4 from '../Images/achivement4.jpg'
 
 function Achievements() {
-  const containerRef = useRef(null);
-  const descRef = useRef(null);
-  const [activeP, setActiveP] = useState(0);
-  const [lastP, setLastP] = useState(-1);
-  const [acknowledge, setAcknowledge] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(true)
+  const [opacity, setOpacity] = useState(0);
+  const [active, setActive] = useState(true);
+  const [inserting, setInserting] = useState(false)
   useEffect(() => {
-    document.body.addEventListener("wheel", handleMouseWheel);
-    return () => document.body.removeEventListener("wheel", handleMouseWheel);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+  }, [])
+  // Refresh the section to properly configured the section
   useEffect(() => {
-    let timeout = null;
-    timeout = setTimeout(() => {
-      document.body.addEventListener("wheel", handleMouseWheel);
-
-      setAcknowledge(false);
-    }, 800);
-    return () => timeout && clearTimeout(timeout);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [acknowledge]);
-  const handleMouseWheel = (e) => {
-    const mainDiv = containerRef.current || null;
-    const descDiv = descRef.current || null;
-
-    if (mainDiv && descRef) {
-      const isMainDivEnd =
-        e.deltaY > 0
-          ? mainDiv.getBoundingClientRect().bottom + 200 <= window.innerHeight
-          : mainDiv.getBoundingClientRect().top >= 200;
-      if (
-        (e.deltaY > 0 && activeP === descDiv.childElementCount - 1) ||
-        (e.deltaY < 0 && activeP === 0)
-      ) {
-        document.body.classList.remove("stop");
-      } else if (isMainDivEnd && Math.abs(e.wheelDeltaY) > 50) {
-        document.body.classList.add("stop");
-        elementToggle(e.deltaY > 0 ? "up" : "down");
+    // console.log('Height Changed', active, inserting);
+    if (!inserting) {
+      if (active && document.querySelector('.achiviments-wrapper')) {
+        setActive(false);
+        setTimeout(() => { activate() }, 1);
+      }
+      else {
+        activate()
       }
     }
+  },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [document.getElementById('root').offsetHeight, isDesktop])
+  const activate = () => {
+    setInserting(true)
+    setActive(true)
+    setTimeout(() => setInserting(false), 100)
+  }
+  // To detect if device screen is small
+  useEffect(() => {
+    setActive(true)
+    if (document.body.offsetWidth > 700) setIsDesktop(true)
+    else setIsDesktop(false)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [document.body.offsetWidth])
+
+  const calcOpacity = (y) => {
+    if (y > 0) {
+      let value = (Math.abs(y) * .01) * .5;
+      value = value < .3 ? 0 : value;
+      return (value)
+    }
+
+    if (y < -(window.innerHeight * .2))
+      return 1
+    else {
+      return (Math.abs(y) * .1) * .5
+    }
+
   };
-
-  const elementToggle = (type = "up") => {
-    const div = descRef.current;
-    const c = type === "up" ? +1 : -1;
-    const nextActive =
-      activeP + c >= 0 && activeP + c < div.childElementCount
-        ? activeP + c
-        : activeP;
-
-    const nextPrev = nextActive - 1;
-    setActiveP(nextActive);
-    setLastP(nextPrev);
-    document.body.removeEventListener("wheel", handleMouseWheel);
-    setAcknowledge(true);
-  };
-
   return (
-    <div className="overview-wrapper achievements-wrapper" ref={containerRef}>
-      <div className="item">
-        <h1 data-text="Achievements" className="title">
-          Achievements
-        </h1>
-
-        <div className="description" ref={descRef}>
-          {paragraphData.map((item, index) => (
-            <p
-              key={index}
-              className={`${index === activeP ? "active" : ""}${
-                index === lastP ? " prev" : ""
-              }`}
-            >
-              {item}
-            </p>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+    <div className="achiviments-wrapper">
+      {active ?
+        <>
+          <div className="hide" style={{ opacity: opacity - (isDesktop ? .2 : - 0) }} />
+          <RellaxWrapper speed={isDesktop ? 2 : 1} callback={({ _, y }) => { /*console.log('Kk', y, '->', calcOpacity(y));*/ setOpacity(calcOpacity(y)) }} percentage={2} centered={false} style={{ zIndex: 1, position: 'absolute', top: `${isDesktop ? '-200px' : '150px'}`, left: '0px', visibility: 'hidden' }}>
+            <div className="text" >My <br className="break" />Achievement</div>
+          </RellaxWrapper>
+          <div className="text" >My <br className="break" />Achievement</div>
+          <div className="cols">
+            <RellaxWrapper className="col" speed={isDesktop ? 10 : 1} center={false} percentage={isDesktop ? .6 : 0} style={{ zIndex: 0 }}>
+              <div className="hide" style={{ opacity: opacity }} />
+              <img src={img1} alt="Achivement 1" />
+              <img src={img2} alt="Achivement 2" />
+            </RellaxWrapper>
+            <RellaxWrapper className="col" speed={isDesktop ? -40 : -1} center={false} percentage={isDesktop ? .3 : 1} style={{ zIndex: 2 }}>
+              <div className="hide" style={{ opacity: opacity }} />
+              <img src={img3} alt="Achivement 3" />
+              <img src={img4} alt="Achivement 4" />
+            </RellaxWrapper>
+          </div>
+        </>
+        : <></>}</div >)
 }
 
-export default Achievements;
-
-const paragraphData = [
-  "1)  I’m Aryan Shah, a UI/UX & visual designer based in India. I design beautiful websites and apps which enables your business to grow exponentially.",
-  "2) Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cum molestiae dicta dolor, veniam nostrum placeat totam similique minimasint blanditiis at incidunt omnis aliquam sit assumenda atque. Voluptatem, amet.",
-  "3)   I’m Aryan Shah, a UI/UX & visual designer based in India. I design beautiful websites and apps which enables your business to grow exponentially.",
-];
+export default Achievements

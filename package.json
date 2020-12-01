@@ -11,6 +11,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-image-list-distort": "^1.0.33",
+    "react-rellax-wrapper": "^1.0.5",
     "react-scripts": "3.4.3",
     "three": "^0.111.0"
   },
