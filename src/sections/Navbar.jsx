@@ -9,7 +9,7 @@ function Navbar() {
   const [lastBlockActive, setLastBlockActive] = useState(false);
   const goTo = (to) => {
     setNavbarOpen(false);
-    setTimeout(() =>  document.querySelector(`${to}`).scrollIntoView({ 
+    setTimeout(() =>  document.querySelector(`${to}`).scrollIntoViewIfNeeded({ 
       behavior: 'smooth' 
     }), 1000)
    

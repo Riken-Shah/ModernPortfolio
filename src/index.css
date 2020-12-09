@@ -10,3 +10,6 @@ body {
   /* overflow-x:hidden; */
 }
 
+.main-container{
+  overflow: hidden;
+}

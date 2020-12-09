@@ -22,12 +22,21 @@ function Project() {
       this.onMouseOver(0);
       this._onMouseLeave()
     }*/
+    if(document.getElementsByTagName('canvas').length === 1)
+    document.getElementsByTagName('canvas')[0].addEventListener("webglcontextlost", () => { window.location.reload(); });
+    try{
     global.bugFix && global.bugFix();
+    }
+    catch{}
   }, [showMoreProjects]);
 
   return (
     <div className="project-wrapper" id="projects">
       <div className="main-projects" >
+        <h1 className="phone-title">
+          Project
+        </h1>
+
         {projectDetails.slice(0, projectBreakpoint).map((value, index) => (
           <ProjectBlock key={index} number={++index} {...value} active={true} />
         ))}
@@ -54,7 +63,7 @@ function Project() {
           alt="Arrow"
           className={showMoreProjects ? "rotate" : ""}
         />
-        <span>More projects</span>
+        <span>{!showMoreProjects ? 'More projects':'Less projects'}</span>
       </div>
       <ImageDistort
         // Image Distort Library
