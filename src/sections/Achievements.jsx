@@ -45,6 +45,16 @@ function Achievements() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [document.body.offsetWidth])
 
+  useEffect(() => {
+    if(document.querySelector('.cols') && isDesktop)
+     if(opacity > 1.6)
+      document.querySelector('.cols').style.display = 'none';
+    
+    else
+    document.querySelector('.cols').style.display = 'flex';
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [opacity])
+
   const calcOpacity = (y) => {
     if (y > 0) {
       let value = (Math.abs(y) * .01) * .5;
@@ -60,7 +70,7 @@ function Achievements() {
 
   };
   return (
-    <div className="achiviments-wrapper">
+    <div className="achiviments-wrapper" id="achivements">
       {active ?
         <>
           <div className="hide" style={{ opacity: opacity - (isDesktop ? .2 : - 0) }} />
