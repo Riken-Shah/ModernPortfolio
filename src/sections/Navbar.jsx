@@ -110,12 +110,6 @@ const navbarSections = [
     to: "#home"
   },
   {
-    title: "OVERVIEW",
-    desc: "Hey, my name is aryan shah.   by profession i am uI/UX designer.",
-    to: "#overview"
-
-  },
-  {
     title: "WORK",
     desc: "Click here to see my projects",
     to: "#projects"
@@ -125,7 +119,11 @@ const navbarSections = [
     desc: "i design UI/UX app , website , and digital Strategies.",
     to: "#solutions"
   },
-
+  {
+    title: "ACHIVEMENTS",
+    desc: "i design UI/UX app , website , and digital Strategies.",
+    to: "#achivements"
+  },
   {
     title: "Contact Me",
     desc:
