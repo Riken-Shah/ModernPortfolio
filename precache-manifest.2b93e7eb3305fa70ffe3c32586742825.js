@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "72d1c5913dccdc8e553db5c8d45a341e",
+    "revision": "ee72fb403e87effe2b65f5bfc729d05a",
     "url": "/index.html"
   },
   {
-    "revision": "630dcd20c4f3f0f852f2",
-    "url": "/static/css/main.b4727875.chunk.css"
+    "revision": "147c641c68f5e98907f8",
+    "url": "/static/css/main.68b1e80b.chunk.css"
   },
   {
     "revision": "271c1d7f953616c7eba7",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.8238f51e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "630dcd20c4f3f0f852f2",
-    "url": "/static/js/main.22baf080.chunk.js"
+    "revision": "147c641c68f5e98907f8",
+    "url": "/static/js/main.1b55aaed.chunk.js"
   },
   {
     "revision": "eb33f730193646177bf7",
@@ -56,20 +56,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Poppins-Regular.8b6af8e5.ttf"
   },
   {
-    "revision": "6b1bc53dc25636d75c9cb56f2f3b48e5",
-    "url": "/static/media/achivement1.6b1bc53d.jpg"
+    "revision": "69be450e6a94922c9b5ef7bbb44cd1c8",
+    "url": "/static/media/achivement1.69be450e.jpg"
   },
   {
-    "revision": "aedc93c3183c6913de50bc6f7c00aa57",
-    "url": "/static/media/achivement2.aedc93c3.jpg"
+    "revision": "e490a913d377645a6fea29aec1e3619d",
+    "url": "/static/media/achivement2.e490a913.jpg"
   },
   {
-    "revision": "8b8c5feafe6a905aa4acbd3a34d73d22",
-    "url": "/static/media/achivement3.8b8c5fea.jpg"
+    "revision": "c052439b3ea942978d163c0c2a37614f",
+    "url": "/static/media/achivement3.c052439b.jpg"
   },
   {
-    "revision": "43bc4e599e53af638e15eaa06e61e938",
-    "url": "/static/media/achivement4.43bc4e59.jpg"
+    "revision": "f80bec6dcb19b67c712ae053ea919dc1",
+    "url": "/static/media/achivement4.f80bec6d.jpg"
   },
   {
     "revision": "f9c155bce6e33203961e5b3265c31849",

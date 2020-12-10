@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.b4727875.chunk.css",
-    "main.js": "/static/js/main.22baf080.chunk.js",
-    "main.js.map": "/static/js/main.22baf080.chunk.js.map",
+    "main.css": "/static/css/main.68b1e80b.chunk.css",
+    "main.js": "/static/js/main.1b55aaed.chunk.js",
+    "main.js.map": "/static/js/main.1b55aaed.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1963380e.js",
     "runtime-main.js.map": "/static/js/runtime-main.1963380e.js.map",
     "static/js/2.8238f51e.chunk.js": "/static/js/2.8238f51e.chunk.js",
     "static/js/2.8238f51e.chunk.js.map": "/static/js/2.8238f51e.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.06c1116e0bc0a1fdf6cdf7522cc305fb.js": "/precache-manifest.06c1116e0bc0a1fdf6cdf7522cc305fb.js",
+    "precache-manifest.2b93e7eb3305fa70ffe3c32586742825.js": "/precache-manifest.2b93e7eb3305fa70ffe3c32586742825.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.b4727875.chunk.css.map": "/static/css/main.b4727875.chunk.css.map",
+    "static/css/main.68b1e80b.chunk.css.map": "/static/css/main.68b1e80b.chunk.css.map",
     "static/js/2.8238f51e.chunk.js.LICENSE.txt": "/static/js/2.8238f51e.chunk.js.LICENSE.txt",
     "static/media/AudiR8.png": "/static/media/AudiR8.93affdbb.png",
     "static/media/CocoColaNightPortal.png": "/static/media/CocoColaNightPortal.5143e55d.png",
@@ -19,10 +19,10 @@
     "static/media/ElectronicApp.jpg": "/static/media/ElectronicApp.f4781009.jpg",
     "static/media/App.scss": "/static/media/Poppins-Regular.8b6af8e5.ttf",
     "static/media/MusicApp.jpg": "/static/media/MusicApp.01b9d83a.jpg",
-    "static/media/achivement1.jpg": "/static/media/achivement1.6b1bc53d.jpg",
-    "static/media/achivement2.jpg": "/static/media/achivement2.aedc93c3.jpg",
-    "static/media/achivement3.jpg": "/static/media/achivement3.8b8c5fea.jpg",
-    "static/media/achivement4.jpg": "/static/media/achivement4.43bc4e59.jpg",
+    "static/media/achivement1.jpg": "/static/media/achivement1.69be450e.jpg",
+    "static/media/achivement2.jpg": "/static/media/achivement2.e490a913.jpg",
+    "static/media/achivement3.jpg": "/static/media/achivement3.c052439b.jpg",
+    "static/media/achivement4.jpg": "/static/media/achivement4.f80bec6d.jpg",
     "static/media/arrow.svg": "/static/media/arrow.f9c155bc.svg",
     "static/media/aryan.png": "/static/media/aryan.230c898d.png",
     "static/media/aryan.gif": "/static/media/aryan.3c8ce45a.gif",
@@ -34,7 +34,7 @@
   "entrypoints": [
     "static/js/runtime-main.1963380e.js",
     "static/js/2.8238f51e.chunk.js",
-    "static/css/main.b4727875.chunk.css",
-    "static/js/main.22baf080.chunk.js"
+    "static/css/main.68b1e80b.chunk.css",
+    "static/js/main.1b55aaed.chunk.js"
   ]
 }
