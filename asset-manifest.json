@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ModernPortfolio/static/css/main.f9d8e858.chunk.css",
-    "main.js": "/ModernPortfolio/static/js/main.839ac377.chunk.js",
-    "main.js.map": "/ModernPortfolio/static/js/main.839ac377.chunk.js.map",
+    "main.css": "/ModernPortfolio/static/css/main.d5f35522.chunk.css",
+    "main.js": "/ModernPortfolio/static/js/main.363ae070.chunk.js",
+    "main.js.map": "/ModernPortfolio/static/js/main.363ae070.chunk.js.map",
     "runtime-main.js": "/ModernPortfolio/static/js/runtime-main.31460716.js",
     "runtime-main.js.map": "/ModernPortfolio/static/js/runtime-main.31460716.js.map",
-    "static/js/2.684105b2.chunk.js": "/ModernPortfolio/static/js/2.684105b2.chunk.js",
-    "static/js/2.684105b2.chunk.js.map": "/ModernPortfolio/static/js/2.684105b2.chunk.js.map",
+    "static/js/2.8238f51e.chunk.js": "/ModernPortfolio/static/js/2.8238f51e.chunk.js",
+    "static/js/2.8238f51e.chunk.js.map": "/ModernPortfolio/static/js/2.8238f51e.chunk.js.map",
     "index.html": "/ModernPortfolio/index.html",
-    "precache-manifest.469393fc5341d72d4a93b6dad6db397a.js": "/ModernPortfolio/precache-manifest.469393fc5341d72d4a93b6dad6db397a.js",
+    "precache-manifest.3509b9c32a0c0040e0ed58a288c4b96b.js": "/ModernPortfolio/precache-manifest.3509b9c32a0c0040e0ed58a288c4b96b.js",
     "service-worker.js": "/ModernPortfolio/service-worker.js",
-    "static/css/main.f9d8e858.chunk.css.map": "/ModernPortfolio/static/css/main.f9d8e858.chunk.css.map",
-    "static/js/2.684105b2.chunk.js.LICENSE.txt": "/ModernPortfolio/static/js/2.684105b2.chunk.js.LICENSE.txt",
+    "static/css/main.d5f35522.chunk.css.map": "/ModernPortfolio/static/css/main.d5f35522.chunk.css.map",
+    "static/js/2.8238f51e.chunk.js.LICENSE.txt": "/ModernPortfolio/static/js/2.8238f51e.chunk.js.LICENSE.txt",
     "static/media/AudiR8.png": "/ModernPortfolio/static/media/AudiR8.93affdbb.png",
     "static/media/CocoColaNightPortal.png": "/ModernPortfolio/static/media/CocoColaNightPortal.5143e55d.png",
     "static/media/E-CommerceApp.jpg": "/ModernPortfolio/static/media/E-CommerceApp.a5d4e710.jpg",
@@ -33,8 +33,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.31460716.js",
-    "static/js/2.684105b2.chunk.js",
-    "static/css/main.f9d8e858.chunk.css",
-    "static/js/main.839ac377.chunk.js"
+    "static/js/2.8238f51e.chunk.js",
+    "static/css/main.d5f35522.chunk.css",
+    "static/js/main.363ae070.chunk.js"
   ]
 }
