@@ -234,7 +234,7 @@ body {
                 display: inline-block;
                 content: attr(data-content);
                 //color to be filled
-                color: $secondary-color;
+                color: #c4c4c4;
                 text-shadow: -1px -1px 0 white, 1px -1px 0 white,
                   -1px 1px 0 white, 1px 1px 0 white;
                 z-index: 5;
@@ -503,6 +503,7 @@ body {
             margin-top: 300px;
             img{
               margin: 10px 0;
+              width: 200px;
             }
             
             &:first-child{

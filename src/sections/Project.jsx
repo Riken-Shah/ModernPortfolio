@@ -111,9 +111,9 @@ const ProjectBlock = ({ title, number, type, active, img, to }) => {
 // Project Raw Data
 const projectDetails = [
   { title: "Audi R8 Website", type: "website design", img: AudiR8, to: "https://www.instagram.com/p/CF1gEMOgZNj/?igshid=1wipjktdmznfy" },
-  { title: "Coco Cola Night Portal", type: "app design", img: CocoCola, to: "https://www.instagram.com/p/CCaG6ZrA_x-/?igshid=hbf3dz3pw1rx" },
+  { title: "Coco Cola Night Portal", type: "website design", img: CocoCola, to: "https://www.instagram.com/p/CCaG6ZrA_x-/?igshid=hbf3dz3pw1rx" },
   { title: "Music App concept", type: "app design", img: MusicAppConcept, to: "https://www.instagram.com/p/CCp3HdbAH6q/?igshid=po5x1h2pklek" },
-  { title: "Educational Portal", type: "app design", img: EducationalPortal, to: "https://www.instagram.com/p/B_zi-GADllA/?igshid=pbg8xalum5ox" },
+  { title: "Educational Portal", type: "website design", img: EducationalPortal, to: "https://www.instagram.com/p/B_zi-GADllA/?igshid=pbg8xalum5ox" },
   { title: "E-commerce app concept", type: "app design", img: ECommerce, to: "https://www.instagram.com/p/CCS6rYbgGqH/?igshid=hy1leio2g58y" },
   { title: "Electronic app concept", type: "app design", img: ElectronicApp, to: "https://www.instagram.com/p/B_5Kl3NDCpO/?igshid=x1xjeniy1w53" },
 

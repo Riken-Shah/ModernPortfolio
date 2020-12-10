@@ -16,7 +16,7 @@ function Navbar() {
   }
   return (
     <div className="nav-container">
-      <a className="logo nav-item" href="hero">
+      <a className="logo nav-item">
         $HAH
       </a>
       <div className="connect">
@@ -110,7 +110,7 @@ const navbarSections = [
     to: "#home"
   },
   {
-    title: "WORK",
+    title: "PROJECT",
     desc: "Click here to see my projects",
     to: "#projects"
   },
@@ -120,8 +120,8 @@ const navbarSections = [
     to: "#solutions"
   },
   {
-    title: "ACHIVEMENTS",
-    desc: "i design UI/UX app , website , and digital Strategies.",
+    title: "ACHIEVEMENTS",
+    desc: "Here are some of my achievements.",
     to: "#achivements"
   },
   {
