@@ -1,7 +1,18 @@
-export { default as Navbar } from "./Navbar";
-export { default as Hero } from "./Hero";
-export { default as Overview } from "./Overview";
-export { default as Project } from "./Project";
-export { default as Achievements } from "./Achievements";
-export { default as Solutions } from "./Solutions";
-export { default as Connection } from "./Connection";
+import React from 'react'
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Overview from "./Overview";
+import Project from "./Project";
+import Achievements from "./Achievements";
+import Solutions from "./Solutions";
+import Connection from "./Connection";
+const HomePage = () => (<div className="main-container">
+      <Navbar />
+      <Hero />
+      <Overview />
+      <Project />
+      <Solutions />
+      <Achievements />
+      <Connection />
+    </div>)
+export default HomePage;

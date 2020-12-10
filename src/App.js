@@ -1,18 +1,13 @@
 import React from "react";
 import "./App.scss";
-import { Navbar, Hero, Overview, Project, Connection, Solutions, Achievements } from "./sections";
+import HomePage from './sections'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="main-container">
-      <Navbar />
-      <Hero />
-      <Overview />
-      <Project />
-      <Solutions />
-      <Achievements />
-      <Connection />
-    </div>
+    <Router>
+      <Route path="/" component={HomePage}></Route>
+    </Router>
   );
 }
 
