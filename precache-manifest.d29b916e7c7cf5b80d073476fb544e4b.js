@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ee72fb403e87effe2b65f5bfc729d05a",
+    "revision": "c55fd0f774e75e4219e94672e8c3beb8",
     "url": "/index.html"
   },
   {
-    "revision": "147c641c68f5e98907f8",
-    "url": "/static/css/main.68b1e80b.chunk.css"
+    "revision": "1aeca4a11ba28e44854b",
+    "url": "/static/css/main.e72da3a3.chunk.css"
   },
   {
     "revision": "271c1d7f953616c7eba7",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.8238f51e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "147c641c68f5e98907f8",
-    "url": "/static/js/main.1b55aaed.chunk.js"
+    "revision": "1aeca4a11ba28e44854b",
+    "url": "/static/js/main.ed20bba4.chunk.js"
   },
   {
     "revision": "eb33f730193646177bf7",
@@ -26,10 +26,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "93affdbbd8742f2f77149b9c4cb29987",
     "url": "/static/media/AudiR8.93affdbb.png"
-  },
-  {
-    "revision": "5143e55dc2c68537a3c405b98be20f4c",
-    "url": "/static/media/CocoColaNightPortal.5143e55d.png"
   },
   {
     "revision": "a5d4e710dad6f5ccda6b8a4ffeb865ff",
@@ -54,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8b6af8e5e8324edfd77af8b3b35d7f9c",
     "url": "/static/media/Poppins-Regular.8b6af8e5.ttf"
+  },
+  {
+    "revision": "46aadaf3f4a2b8add06af5f204efb2a2",
+    "url": "/static/media/SaveNatureWebsiteConcept.46aadaf3.png"
   },
   {
     "revision": "69be450e6a94922c9b5ef7bbb44cd1c8",
