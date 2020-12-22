@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import arrow from "../Images/arrow.svg";
 import AudiR8 from "../Images/AudiR8.png";
-import CocoCola from "../Images/CocoColaNightPortal.png";
+import SaveNature from "../Images/SaveNatureWebsiteConcept.png";
 import EducationalPortal from "../Images/EducationalPortal.png";
 import MusicAppConcept from "../Images/MusicApp.jpg";
 import ECommerce from "../Images/E-CommerceApp.jpg";
@@ -111,7 +111,7 @@ const ProjectBlock = ({ title, number, type, active, img, to }) => {
 // Project Raw Data
 const projectDetails = [
   { title: "Audi R8 Website", type: "website design", img: AudiR8, to: "https://www.instagram.com/p/CF1gEMOgZNj/?igshid=1wipjktdmznfy" },
-  { title: "Coco Cola Night Portal", type: "website design", img: CocoCola, to: "https://www.instagram.com/p/CCaG6ZrA_x-/?igshid=hbf3dz3pw1rx" },
+  { title: "Save Nature Website", type: "website design", img: SaveNature, to: "https://www.instagram.com/p/CIiHX_bABex/" },
   { title: "Music App concept", type: "app design", img: MusicAppConcept, to: "https://www.instagram.com/p/CCp3HdbAH6q/?igshid=po5x1h2pklek" },
   { title: "Educational Portal", type: "website design", img: EducationalPortal, to: "https://www.instagram.com/p/B_zi-GADllA/?igshid=pbg8xalum5ox" },
   { title: "E-commerce app concept", type: "app design", img: ECommerce, to: "https://www.instagram.com/p/CCS6rYbgGqH/?igshid=hy1leio2g58y" },
