@@ -3,7 +3,7 @@
 \
 THIS PROJECT IS UNDER DEVELOPMENT 🏗\
 \
-You can view it's live demo [here](https://aryan-portfolio.web.app/)\
+You can view it's live demo [here](https://riken-shah.github.io/ModernPortfolio/)\
 \
 🙅‍♂️ (Note: This portfolio is not mine this is for my friend) 🙅‍♂️
 ## Little about the project
