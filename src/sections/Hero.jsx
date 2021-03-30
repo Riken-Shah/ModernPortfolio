@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import aryan from "../Images/aryan.gif";
+import aryan from "../Images/aryan.png";
 import arrow from "../Images/arrow.svg";
 
 // Function to return a text with shadow effect

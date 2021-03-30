@@ -261,13 +261,14 @@ body {
       .self-pic {
         display: none;
         position: absolute;
-        right: 8%;
+        right: -10%;
+        top: -2%;
         z-index: 1;
         &.show {
           display: block;
         }
         img {
-          width: 220px;
+          height: 350px;
         }
       }
       // Button
@@ -702,7 +703,7 @@ body {
           display: block;
           margin: 20px auto 50px auto;
           img {
-            width: 150px;
+            height: 250px;
           }
         }
       }
