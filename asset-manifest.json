@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.8322eb8c.chunk.css",
+    "main.css": "/static/css/main.2f3e964f.chunk.css",
     "main.js": "/static/js/main.b06ce573.chunk.js",
     "main.js.map": "/static/js/main.b06ce573.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1963380e.js",
@@ -8,9 +8,9 @@
     "static/js/2.407916df.chunk.js": "/static/js/2.407916df.chunk.js",
     "static/js/2.407916df.chunk.js.map": "/static/js/2.407916df.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8b48a88d725479fb1bbd3a4b716b58cf.js": "/precache-manifest.8b48a88d725479fb1bbd3a4b716b58cf.js",
+    "precache-manifest.ab23547017516079d542a4213f9a99fd.js": "/precache-manifest.ab23547017516079d542a4213f9a99fd.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.8322eb8c.chunk.css.map": "/static/css/main.8322eb8c.chunk.css.map",
+    "static/css/main.2f3e964f.chunk.css.map": "/static/css/main.2f3e964f.chunk.css.map",
     "static/js/2.407916df.chunk.js.LICENSE.txt": "/static/js/2.407916df.chunk.js.LICENSE.txt",
     "static/media/AudiR8.png": "/static/media/AudiR8.93affdbb.png",
     "static/media/E-CommerceApp.jpg": "/static/media/E-CommerceApp.a5d4e710.jpg",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.1963380e.js",
     "static/js/2.407916df.chunk.js",
-    "static/css/main.8322eb8c.chunk.css",
+    "static/css/main.2f3e964f.chunk.css",
     "static/js/main.b06ce573.chunk.js"
   ]
 }
