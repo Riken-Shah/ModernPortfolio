@@ -47,16 +47,12 @@ function Achievements() {
 
 
   const calcOpacity = (y) => {
-    if (y > 0) {
-      let value = (Math.abs(y) * .01) * .5;
-      value = value < .3 ? 0 : value;
-      return (value)
-    }
 
-    if (y < -(window.innerHeight * .2))
-      return 1
-    else {
-      return (Math.abs(y) * .1) * .5
+    if (y < -30){
+      return Math.abs(y) * 0.015;
+    }
+    else{
+      return 0;
     }
 
   };
